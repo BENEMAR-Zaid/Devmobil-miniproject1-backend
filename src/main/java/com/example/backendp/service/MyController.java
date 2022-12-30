@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import jakarta.annotation.PostConstruct;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.Map;
@@ -28,6 +30,12 @@ public class MyController {
 	    ObjectMapper mapper = new ObjectMapper();
 	    return mapper.readTree(sURL).get("info").get("rate");
 	}
+    @RequestMapping("/")
+	public String helloPage()  {
+    	
+    	return " Hello World ";
+	}
+   
     
     @GetMapping("/specify/{from}/{to}/{value}")
     public ResponseEntity<Map<String, Float>> get2(@PathVariable("from") String from, @PathVariable("to") String to , @PathVariable("value") Float value) throws IOException {
