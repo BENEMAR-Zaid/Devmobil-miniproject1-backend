@@ -1,3 +1,10 @@
+/* Group du travaile : 
+ * 
+ * BENAMAR Zaid   (MBD)
+ * AARAB Yasmine  (MBD)
+ * 
+ * */
+
 package com.example.backendp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +30,6 @@ public class MyController {
 	@Autowired
 	ConvertionDao convdao;
 	
-    @GetMapping("/all")
-	public static JsonNode get() throws IOException {
-    	String myUrl = "https://api.exchangerate.host/convert?from=EUR&to=MAD";
-    	URL sURL = new URL(myUrl);
-	    ObjectMapper mapper = new ObjectMapper();
-	    return mapper.readTree(sURL).get("info").get("rate");
-	}
     @RequestMapping("/")
 	public String helloPage()  {
     	

@@ -1,3 +1,10 @@
+
+/* Group du travaile : 
+ * 
+ * BENAMAR Zaid   (MBD)
+ * AARAB Yasmine  (MBD)
+ * 
+ * */
 package com.example.backendp.service;
 
 import jakarta.persistence.*;
